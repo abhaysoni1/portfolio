@@ -9,35 +9,19 @@ const experiences = [
     role: 'Associate Software Engineer',
     company: 'Affimintus Technologies',
     duration: 'July 2022 – August 2023',
-    description: [
-      'Built backend services for an e-commerce platform using Java and Spring Boot, optimizing API response times by 20% through caching (Redis) and query optimization.',
-      'Enhanced dashboard UI with ReactJS, increasing user engagement by 15%.',
-      'Handled 1,000+ concurrent users securely using JWT, SSL, and load balancing.',
-      'Improved order data processing by 25% with MySQL indexing and optimization.',
-      'Maintained Git & GitHub version control for collaborative development.',
-      'Achieved 80% code coverage using JUnit and Sonar, reducing bugs by 20%.',
-    ],
+    description: `I have a proven track record in building robust backend services for e-commerce platforms using Java and Spring Boot. By implementing Redis caching and query optimization techniques, I optimized API response times by 20%, ensuring swift and efficient user experiences. Concurrently, I enhanced the platform's frontend with ReactJS, resulting in a notable 15% increase in user engagement. Security-wise, I adeptly managed over 1,000 concurrent users through JWT, SSL, and load balancing techniques. Moreover, I streamlined order data processing with MySQL indexing, improving efficiency by 25%. Throughout these projects, I maintained rigorous version control using Git & GitHub, facilitating seamless collaboration. Achieving an impressive 80% code coverage with JUnit and Sonar, I significantly reduced bugs, further ensuring high-quality deliverables.`,
   },
   {
     role: 'Intern',
     company: 'IBM',
     duration: 'January 2022 – May 2022',
-    description: [
-      'Developed an AI-powered healthcare model using Python, SVM, and scikit-learn, improving predictive accuracy by 20%.',
-      'Implemented data encryption protocols and OAuth 2.0 authentication to secure PII.',
-      'Reduced diagnostic errors by 20% through debugging and optimization.',
-      'Applied Agile methodologies and followed SDLC best practices to streamline delivery.',
-    ],
+    description: `I developed an AI-powered healthcare model leveraging Python, SVM, and scikit-learn, enhancing predictive accuracy by 20%. To ensure the security of personally identifiable information (PII), I implemented robust data encryption protocols and OAuth 2.0 authentication. Through rigorous debugging and optimization, I reduced diagnostic errors by 20%, improving overall model performance. Additionally, I applied Agile methodologies and adhered to SDLC best practices, which significantly streamlined the project delivery process."`,
   },
   {
     role: 'Software Engineer Intern',
     company: 'Affimintus Technologies',
     duration: 'May 2021 – November 2021',
-    description: [
-      'Developed and maintained over 10 RESTful APIs and microservices using JSON and XML, reducing data exchange errors by 25%.',
-      'Collaborated with cross-functional teams to align development with business goals.',
-      'Contributed to Agile sprints using Scrum methodology for faster iteration.',
-    ],
+    description: `I developed and maintained over 10 RESTful APIs and microservices utilizing JSON and XML, resulting in a 25% reduction in data exchange errors. By collaborating closely with cross-functional teams, I ensured alignment between development efforts and business objectives. Additionally, I actively contributed to Agile sprints using the Scrum methodology, facilitating faster iteration and continuous improvement throughout the development process.`,
   },
 ];
 
@@ -81,12 +65,19 @@ const Home = () => {
                   Get In Touch
                 </Link>
               </div>
+              <div className="flex flex-wrap gap-3 mt-6">
+  <a href="#about" className="btn btn-sm btn-secondary">About Me</a>
+  <a href="#expertise" className="btn btn-sm btn-secondary">Technical Expertise</a>
+  <a href="#experience" className="btn btn-sm btn-secondary">Experience</a>
+  <a href="#education" className="btn btn-sm btn-secondary">Education</a>
+</div>
+
             </div>
             <div className="md:col-span-5">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    src="src\data\images\AbhayGrad.jpg"
                     alt="Abhay Soni - Software Engineer"
                     className="w-full h-auto"
                   />
@@ -106,7 +97,6 @@ const Home = () => {
           <AnimatedSection>
             <SectionHeading
               title="About Me"
-              subtitle="I am a dedicated software engineer with a strong foundation in computer science and a passion for building innovative solutions."
               align="center"
             />
           </AnimatedSection>
@@ -115,7 +105,7 @@ const Home = () => {
             <div className="prose prose-lg dark:prose-invert max-w-none">
               <div className="card">
                 <p>
-                  Full-Stack Software Engineer with 2 years of experience and a
+                  I am a Full-Stack Software Engineer with 2 years of experience and a
                   Master’s in Computer Science from Pace University New York
                   (GPA: 3.97/4). Skilled in building scalable, secure
                   applications using Java, Spring Boot, ReactJS, and Python.
@@ -131,7 +121,7 @@ const Home = () => {
 
           <AnimatedSection>
             <div className="space-y-8">
-              <div>
+              <div id="expertise" className="pt-20 -mt-20">
                 <AnimatedSection>
                   <SectionHeading
                     title="Technical Expertise"
@@ -140,48 +130,51 @@ const Home = () => {
                   />
                 </AnimatedSection>
                 <div className="flex flex-wrap gap-3">
-                  {/* Programming Languages */}
-                  <SkillBadge name="Java" icon={<Braces size={18} />} />
-                  <SkillBadge name="Python" icon={<Braces size={18} />} />
-                  <SkillBadge name="JavaScript" icon={<Braces size={18} />} />
-                  <SkillBadge name="TypeScript" icon={<Braces size={18} />} />
-                  <SkillBadge name="C++" icon={<Braces size={18} />} />
+  {/* Programming Languages */}
+  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Programming Languages / Frontend / Backend</div>
+  <SkillBadge name="Java" icon={<Braces size={18} />} />
+  <SkillBadge name="Python" icon={<Braces size={18} />} />
+  <SkillBadge name="JavaScript" icon={<Braces size={18} />} />
+  <SkillBadge name="TypeScript" icon={<Braces size={18} />} />
+  <SkillBadge name="C++" icon={<Braces size={18} />} />
+  <SkillBadge name="ReactJS" icon={<Code size={18} />} />
+  <SkillBadge name="Angular" icon={<Code size={18} />} />
+  <SkillBadge name="HTML/CSS" icon={<Code size={18} />} />
+  <SkillBadge name="Node.js" icon={<Server size={18} />} />
+  <SkillBadge name="Spring Boot" icon={<Server size={18} />} />
+  <SkillBadge name="MicroServices" icon={<Server size={18} />} />
+  <SkillBadge name="Express.js" icon={<Server size={18} />} />
+  
+  
 
-                  {/* Frontend */}
-                  <SkillBadge name="ReactJS" icon={<Code size={18} />} />
-                  <SkillBadge name="Angular" icon={<Code size={18} />} />
-                  <SkillBadge name="HTML/CSS" icon={<Code size={18} />} />
+  {/* Databases */}
+  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Databases</div>
+  <SkillBadge name="MongoDB" icon={<Database size={18} />} />
+  <SkillBadge name="MySQL" icon={<Database size={18} />} />
+  <SkillBadge name="PostgreSQL" icon={<Database size={18} />} />
+  <SkillBadge name="SQL Server" icon={<Database size={18} />} />
+  <SkillBadge name="DynamoDB" icon={<Database size={18} />} />
 
-                  {/* Backend */}
-                  <SkillBadge name="Node.js" icon={<Server size={18} />} />
-                  <SkillBadge name="Spring Boot" icon={<Server size={18} />} />
-                  <SkillBadge name="Express.js" icon={<Server size={18} />} />
+  {/* DevOps / Cloud */}
+  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">DevOps / Cloud</div>
+  <SkillBadge name="AWS" icon={<Server size={18} />} />
+  <SkillBadge name="Docker" icon={<Code size={18} />} />
+  <SkillBadge name="Kubernetes" icon={<Server size={18} />} />
+  <SkillBadge name="Jenkins" icon={<Server size={18} />} />
+  <SkillBadge name="Git/GitHub" icon={<Code size={18} />} />
+  <SkillBadge name="RestAPI" icon={<Code size={18} />} />
 
-                  {/* Databases */}
-                  <SkillBadge name="MongoDB" icon={<Database size={18} />} />
-                  <SkillBadge name="MySQL" icon={<Database size={18} />} />
-                  <SkillBadge name="PostgreSQL" icon={<Database size={18} />} />
-                  <SkillBadge name="SQL Server" icon={<Database size={18} />} />
-                  <SkillBadge name="DynamoDB" icon={<Database size={18} />} />
+  {/* AI / ML */}
+  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">AI / ML</div>
+  <SkillBadge name="Machine Learning" icon={<Braces size={18} />} />
+  <SkillBadge name="Scikit-learn" icon={<Braces size={18} />} />
+  <SkillBadge name="LLM APIs" icon={<Braces size={18} />} />
+  <SkillBadge name="Linear Regression" icon={<Braces size={18} />} />
+</div>
 
-                  {/* DevOps / Cloud */}
-                  <SkillBadge name="AWS" icon={<Server size={18} />} />
-                  <SkillBadge name="Docker" icon={<Code size={18} />} />
-                  <SkillBadge name="Kubernetes" icon={<Server size={18} />} />
-                  <SkillBadge name="Jenkins" icon={<Server size={18} />} />
-                  <SkillBadge name="Git/GitHub" icon={<Code size={18} />} />
-
-                  {/* AI/ML */}
-                  <SkillBadge
-                    name="Machine Learning"
-                    icon={<Braces size={18} />}
-                  />
-                  <SkillBadge name="Scikit-learn" icon={<Braces size={18} />} />
-                  <SkillBadge name="LLM APIs" icon={<Braces size={18} />} />
-                </div>
               </div>
 
-              <div>
+              <div id="experience" className="pt-20 -mt-20">
                 <AnimatedSection>
                   <SectionHeading
                     title="Professional Experience"
@@ -212,18 +205,18 @@ const Home = () => {
                       >
                         {openIndex === index ? 'Hide Details' : 'View Details'}
                       </button>
+                      <br/>
                       {openIndex === index && (
-                        <ul className="mt-2 list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
-                          {exp.description.map((item, i) => (
-                            <li key={i}>{item}</li>
-                          ))}
-                        </ul>
+                        
+                         <span className="text-dark-500 dark:text-dark-300 text-sm">
+                          {exp.description}
+                        </span>
                       )}
                     </div>
                   ))}
                 </div>
               </div>
-              <div>
+              <div id="education" className="pt-20 -mt-20">
                 <AnimatedSection>
                   <SectionHeading
                     title="Education"
@@ -241,6 +234,31 @@ const Home = () => {
                         <p className="text-dark-500 dark:text-dark-300">
                           Pace University, New York, USA
                         </p>
+                        <br/>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                        <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Database Management Systems
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Full Stack Enterprise Development
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Mobile Web App Development
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                             Algorithms and 
+Computing Theory
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                             Data Structures and Algorithms
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Python Programming
+          </span>
+          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                          Internet Computing
+          </span>
+          </div>
                       </div>
                       <span className="text-dark-500 dark:text-dark-300 text-sm">
                         2023-2025
@@ -257,6 +275,7 @@ const Home = () => {
                           Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore,
                           India
                         </p>
+                        
                       </div>
                       <span className="text-dark-500 dark:text-dark-300 text-sm">
                         2018-2022
