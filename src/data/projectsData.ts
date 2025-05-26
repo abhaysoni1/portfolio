@@ -25,7 +25,7 @@ const projectsData: ProjectData[] = [
       'A web application that helps students find study partners based on their courses and interests. Built with React, Node.js, and MongoDB.',
     image:
       '.\\src\\data\\images\\icon.png',
-    technologies: ['React.js', 'Node.js', 'MongoDB','Express.js','Jenkins','Firebase','Docker', 'Kubernetes'],
+    technologies: ['React.js', 'Node.js', 'MongoDB','Express.js','Jenkins','Firebase','Docker', 'Kubernetes','LLM API Integration'],
     githubLink: 'https://github.com/abhaysoni1/Ghor-kalyug-StudyMate',
     liveLink:
       'https://frontend-dot-gen-lang-client-0403310649.ue.r.appspot.com/',

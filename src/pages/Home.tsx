@@ -4,31 +4,96 @@ import SectionHeading from '../components/SectionHeading';
 import AnimatedSection from '../components/AnimatedSection';
 import SkillBadge from '../components/SkillBadge';
 import { useState } from 'react';
+
+
+type experiences = {
+  role: string;
+  company: string;
+  duration: string;
+  description: string;
+  tags: string[];
+};
+
 const experiences = [
   {
     role: 'Associate Software Engineer',
     company: 'Affimintus Technologies',
     duration: 'July 2022 – August 2023',
     description: `I have a proven track record in building robust backend services for e-commerce platforms using Java and Spring Boot. By implementing Redis caching and query optimization techniques, I optimized API response times by 20%, ensuring swift and efficient user experiences. Concurrently, I enhanced the platform's frontend with ReactJS, resulting in a notable 15% increase in user engagement. Security-wise, I adeptly managed over 1,000 concurrent users through JWT, SSL, and load balancing techniques. Moreover, I streamlined order data processing with MySQL indexing, improving efficiency by 25%. Throughout these projects, I maintained rigorous version control using Git & GitHub, facilitating seamless collaboration. Achieving an impressive 80% code coverage with JUnit and Sonar, I significantly reduced bugs, further ensuring high-quality deliverables.`,
+    tags: [
+      'Java', 'Spring Boot', 'ReactJS', 'MySQL', 'Redis',
+      'JWT', 'SSL', 'Load Balancing', 'Git', 'GitHub',
+      'JUnit', 'Sonar', 'Agile', 'REST APIs'
+    ]
   },
   {
     role: 'Intern',
     company: 'IBM',
     duration: 'January 2022 – May 2022',
-    description: `I developed an AI-powered healthcare model leveraging Python, SVM, and scikit-learn, enhancing predictive accuracy by 20%. To ensure the security of personally identifiable information (PII), I implemented robust data encryption protocols and OAuth 2.0 authentication. Through rigorous debugging and optimization, I reduced diagnostic errors by 20%, improving overall model performance. Additionally, I applied Agile methodologies and adhered to SDLC best practices, which significantly streamlined the project delivery process."`,
+    description: `I developed an AI-powered healthcare model leveraging Python, SVM, and scikit-learn, enhancing predictive accuracy by 20%. To ensure the security of personally identifiable information (PII), I implemented robust data encryption protocols and OAuth 2.0 authentication. Through rigorous debugging and optimization, I reduced diagnostic errors by 20%, improving overall model performance. Additionally, I applied Agile methodologies and adhered to SDLC best practices, which significantly streamlined the project delivery process.`,
+    tags: [
+      'Python', 'SVM', 'Scikit-learn', 'Data Encryption',
+      'OAuth 2.0', 'Machine Learning', 'SDLC', 'Agile'
+    ]
   },
   {
     role: 'Software Engineer Intern',
     company: 'Affimintus Technologies',
     duration: 'May 2021 – November 2021',
     description: `I developed and maintained over 10 RESTful APIs and microservices utilizing JSON and XML, resulting in a 25% reduction in data exchange errors. By collaborating closely with cross-functional teams, I ensured alignment between development efforts and business objectives. Additionally, I actively contributed to Agile sprints using the Scrum methodology, facilitating faster iteration and continuous improvement throughout the development process.`,
+    tags: [
+      'REST APIs', 'Microservices', 'JSON', 'XML',
+      'Agile', 'Scrum', 'Team Collaboration'
+    ]
+  },
+];
+
+const certifications = [
+  {
+    name: 'INSPIRE (International Student Professional Readiness Education) Program Certification',
+    link: 'https://www.credly.com/badges/da94ee69-20ac-44ce-a73e-17054357d729/linked_in_profile',
+    tags: [
+      'Career Readiness',
+      'Professional Branding',
+      'Interviewing',
+      'Job Search Strategies',
+      'Networking',
+      'Resume Writing',
+      'LinkedIn',
+      'Self-Development'
+    ],
+  },
+  {
+    name: 'Data Science Practitioner (IBM)',
+    link: 'https://www.credly.com/badges/9eaeeaed-2585-4206-b3da-da3600031750/',
+    tags: [
+      'Data Science',
+      'Machine Learning',
+      'Data Visualization',
+      'Deep Learning',
+      'Data Wrangling',
+      'Pandas',
+      'Matplotlib',
+      'IBM Watson',
+      'Watson Studio',
+      'Model Deployment',
+      'IBM Cloud',
+      'Design Thinking',
+      'User Experience'
+    ]
+    ,
+  },
+  {
+    name: 'Introduction to Quantum Computing – Cognitive Class (IBM)',
+    link: 'https://courses.cognitiveclass.ai/certificates/065a1c827b9c46998bad3c10eff1a5c1',
+    tags: ['Quantum Computing', 'Qubit Theory', 'IBM Cognitive Class'],
   },
 ];
 
 const Home = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleCard = (index) => {
+  const toggleCard = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
@@ -66,11 +131,38 @@ const Home = () => {
                 </Link>
               </div>
               <div className="flex flex-wrap gap-3 mt-6">
-  <a href="#about" className="btn btn-sm btn-secondary">About Me</a>
-  <a href="#expertise" className="btn btn-sm btn-secondary">Technical Expertise</a>
-  <a href="#experience" className="btn btn-sm btn-secondary">Experience</a>
-  <a href="#education" className="btn btn-sm btn-secondary">Education</a>
-</div>
+                <a
+                  href="#about"
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white dark:bg-dark-800 text-dark-500 dark:text-dark-300 hover:bg-primary-100 dark:hover:bg-dark-700"
+                >
+                  About Me
+                </a>
+                <a
+                  href="#expertise"
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white dark:bg-dark-800 text-dark-500 dark:text-dark-300 hover:bg-primary-100 dark:hover:bg-dark-700"
+                >
+                  Technical Expertise
+                </a>
+                <a
+                  href="#experience"
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white dark:bg-dark-800 text-dark-500 dark:text-dark-300 hover:bg-primary-100 dark:hover:bg-dark-700"
+                >
+                  Experience
+                </a>
+                <a
+                  href="#education"
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white dark:bg-dark-800 text-dark-500 dark:text-dark-300 hover:bg-primary-100 dark:hover:bg-dark-700"
+                >
+                  Education
+                </a>
+                <a
+                  href="#certifications"
+                  className="px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 bg-white dark:bg-dark-800 text-dark-500 dark:text-dark-300 hover:bg-primary-100 dark:hover:bg-dark-700"
+                >
+                  Certificates
+                </a>
+              </div>
+
 
             </div>
             <div className="md:col-span-5">
@@ -130,47 +222,47 @@ const Home = () => {
                   />
                 </AnimatedSection>
                 <div className="flex flex-wrap gap-3">
-  {/* Programming Languages */}
-  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Programming Languages / Frontend / Backend</div>
-  <SkillBadge name="Java" icon={<Braces size={18} />} />
-  <SkillBadge name="Python" icon={<Braces size={18} />} />
-  <SkillBadge name="JavaScript" icon={<Braces size={18} />} />
-  <SkillBadge name="TypeScript" icon={<Braces size={18} />} />
-  <SkillBadge name="C++" icon={<Braces size={18} />} />
-  <SkillBadge name="ReactJS" icon={<Code size={18} />} />
-  <SkillBadge name="Angular" icon={<Code size={18} />} />
-  <SkillBadge name="HTML/CSS" icon={<Code size={18} />} />
-  <SkillBadge name="Node.js" icon={<Server size={18} />} />
-  <SkillBadge name="Spring Boot" icon={<Server size={18} />} />
-  <SkillBadge name="MicroServices" icon={<Server size={18} />} />
-  <SkillBadge name="Express.js" icon={<Server size={18} />} />
-  
-  
+                  {/* Programming Languages */}
+                  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Programming Languages / Frontend / Backend</div>
+                  <SkillBadge name="Java" icon={<Braces size={18} />} />
+                  <SkillBadge name="Python" icon={<Braces size={18} />} />
+                  <SkillBadge name="JavaScript" icon={<Braces size={18} />} />
+                  <SkillBadge name="TypeScript" icon={<Braces size={18} />} />
+                  <SkillBadge name="C++" icon={<Braces size={18} />} />
+                  <SkillBadge name="ReactJS" icon={<Code size={18} />} />
+                  <SkillBadge name="Angular" icon={<Code size={18} />} />
+                  <SkillBadge name="HTML/CSS" icon={<Code size={18} />} />
+                  <SkillBadge name="Node.js" icon={<Server size={18} />} />
+                  <SkillBadge name="Spring Boot" icon={<Server size={18} />} />
+                  <SkillBadge name="MicroServices" icon={<Server size={18} />} />
+                  <SkillBadge name="Express.js" icon={<Server size={18} />} />
 
-  {/* Databases */}
-  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Databases</div>
-  <SkillBadge name="MongoDB" icon={<Database size={18} />} />
-  <SkillBadge name="MySQL" icon={<Database size={18} />} />
-  <SkillBadge name="PostgreSQL" icon={<Database size={18} />} />
-  <SkillBadge name="SQL Server" icon={<Database size={18} />} />
-  <SkillBadge name="DynamoDB" icon={<Database size={18} />} />
 
-  {/* DevOps / Cloud */}
-  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">DevOps / Cloud</div>
-  <SkillBadge name="AWS" icon={<Server size={18} />} />
-  <SkillBadge name="Docker" icon={<Code size={18} />} />
-  <SkillBadge name="Kubernetes" icon={<Server size={18} />} />
-  <SkillBadge name="Jenkins" icon={<Server size={18} />} />
-  <SkillBadge name="Git/GitHub" icon={<Code size={18} />} />
-  <SkillBadge name="RestAPI" icon={<Code size={18} />} />
 
-  {/* AI / ML */}
-  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">AI / ML</div>
-  <SkillBadge name="Machine Learning" icon={<Braces size={18} />} />
-  <SkillBadge name="Scikit-learn" icon={<Braces size={18} />} />
-  <SkillBadge name="LLM APIs" icon={<Braces size={18} />} />
-  <SkillBadge name="Linear Regression" icon={<Braces size={18} />} />
-</div>
+                  {/* Databases */}
+                  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">Databases</div>
+                  <SkillBadge name="MongoDB" icon={<Database size={18} />} />
+                  <SkillBadge name="MySQL" icon={<Database size={18} />} />
+                  <SkillBadge name="PostgreSQL" icon={<Database size={18} />} />
+                  <SkillBadge name="SQL Server" icon={<Database size={18} />} />
+                  <SkillBadge name="DynamoDB" icon={<Database size={18} />} />
+
+                  {/* DevOps / Cloud */}
+                  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">DevOps / Cloud</div>
+                  <SkillBadge name="AWS" icon={<Server size={18} />} />
+                  <SkillBadge name="Docker" icon={<Code size={18} />} />
+                  <SkillBadge name="Kubernetes" icon={<Server size={18} />} />
+                  <SkillBadge name="Jenkins" icon={<Server size={18} />} />
+                  <SkillBadge name="Git/GitHub" icon={<Code size={18} />} />
+                  <SkillBadge name="RestAPI" icon={<Code size={18} />} />
+
+                  {/* AI / ML */}
+                  <div className="w-full font-semibold text-dark-700 dark:text-dark-300 mt-4">AI / ML</div>
+                  <SkillBadge name="Machine Learning" icon={<Braces size={18} />} />
+                  <SkillBadge name="Scikit-learn" icon={<Braces size={18} />} />
+                  <SkillBadge name="LLM APIs" icon={<Braces size={18} />} />
+                  <SkillBadge name="Linear Regression" icon={<Braces size={18} />} />
+                </div>
 
               </div>
 
@@ -205,16 +297,29 @@ const Home = () => {
                       >
                         {openIndex === index ? 'Hide Details' : 'View Details'}
                       </button>
-                      <br/>
+                      <br />
                       {openIndex === index && (
-                        
-                         <span className="text-dark-500 dark:text-dark-300 text-sm">
+
+                        <span className="text-dark-500 dark:text-dark-300 text-sm">
                           {exp.description}
                         </span>
                       )}
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {exp.tags.map((tag, tagIdx) => (
+                          <span
+                            key={tagIdx}
+                            className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+
                     </div>
                   ))}
                 </div>
+
+
               </div>
               <div id="education" className="pt-20 -mt-20">
                 <AnimatedSection>
@@ -234,31 +339,31 @@ const Home = () => {
                         <p className="text-dark-500 dark:text-dark-300">
                           Pace University, New York, USA
                         </p>
-                        <br/>
+                        <br />
                         <div className="flex flex-wrap gap-2 mb-4">
-                        <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
                             Database Management Systems
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
                             Full Stack Enterprise Development
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
                             Mobile Web App Development
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
-                             Algorithms and 
-Computing Theory
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
-                             Data Structures and Algorithms
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Algorithms and
+                            Computing Theory
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Data Structures and Algorithms
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
                             Python Programming
-          </span>
-          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
-                          Internet Computing
-          </span>
-          </div>
+                          </span>
+                          <span className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full">
+                            Internet Computing
+                          </span>
+                        </div>
                       </div>
                       <span className="text-dark-500 dark:text-dark-300 text-sm">
                         2023-2025
@@ -275,7 +380,7 @@ Computing Theory
                           Shri Vaishnav Vidyapeeth Vishwavidyalaya, Indore,
                           India
                         </p>
-                        
+
                       </div>
                       <span className="text-dark-500 dark:text-dark-300 text-sm">
                         2018-2022
@@ -284,6 +389,44 @@ Computing Theory
                   </div>
                 </div>
               </div>
+              <div id="certifications" className="pt-20 -mt-20">
+                <AnimatedSection>
+                  <SectionHeading title="Certifications" align="left" />
+                </AnimatedSection>
+
+                <div className="space-y-4">
+                  {certifications.map((cert, idx) => (
+                    <div key={idx} className="card">
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <h4 className="font-semibold">
+                            <a
+                              href={cert.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary-600 hover:underline"
+                            >
+                              {cert.name}
+                            </a>
+                          </h4>
+
+                          <div className="flex flex-wrap gap-2 mt-2">
+                            {cert.tags.map((tag, tagIdx) => (
+                              <span
+                                key={tagIdx}
+                                className="px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 text-sm rounded-full"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </AnimatedSection>
         </div>

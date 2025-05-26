@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import { ThemeProvider } from './context/ThemeContext';
 
+
 function App() {
   const location = useLocation();
   
@@ -26,6 +27,8 @@ function App() {
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
+            
+
           </Routes>
         </main>
         <Footer />

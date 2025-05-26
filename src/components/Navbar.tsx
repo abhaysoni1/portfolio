@@ -76,6 +76,13 @@ const Navbar = () => {
           >
             Projects
           </NavLink>
+          <a
+  href="src\assets\Abhay-Soni-Resume.pdf"
+  download="Abhay-Soni-Resume.pdf"
+  className="font-medium text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400"
+>
+  Resume
+</a>
           <NavLink
             to="/contact"
             className={({ isActive }) =>
