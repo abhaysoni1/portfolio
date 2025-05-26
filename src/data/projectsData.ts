@@ -7,7 +7,7 @@ const projectsData: ProjectData[] = [
     description:
       'A full-stack carpool and vehicle rental web application with real-time ride booking, role-based access, GPS tracking, and Stripe payment integration.',
     image:
-      'https://images.pexels.com/photos/7433822/pexels-photo-7433822.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\ride.jpg',
     technologies: [
       'React.js',
       'Redux Toolkit',
@@ -26,7 +26,7 @@ const projectsData: ProjectData[] = [
     description:
       'A web application that helps students find study partners based on their courses and interests. Built with React, Node.js, and MongoDB.',
     image:
-      'https://frontend-dot-gen-lang-client-0403310649.ue.r.appspot.com/icon.png',
+      '.\\src\\data\\images\\icon.png',
     technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux'],
     githubLink: 'https://github.com/abhaysoni1/Ghor-kalyug-StudyMate',
     liveLink:
@@ -38,7 +38,7 @@ const projectsData: ProjectData[] = [
     description:
       'A fitness tracking application that helps users create and follow personalized workout plans. Features include exercise tracking and progress visualization.',
     image:
-      'https://images.pexels.com/photos/6925436/pexels-photo-6925436.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\fit.png',
     technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
     githubLink:
       'https://github.com/abhaysoni1/CS641_abhay_soni/tree/main/BuildYouFit',
@@ -49,7 +49,7 @@ const projectsData: ProjectData[] = [
     description:
       'An educational platform enabling institutions to host and manage online teaching without their own website infrastructure.',
     image:
-      'https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\fit.png',
     technologies: ['JavaEE', 'ReactJS', 'Spring', 'MySQL', 'HTML', 'CSS'],
     githubLink: 'https://github.com',
   },
@@ -59,7 +59,7 @@ const projectsData: ProjectData[] = [
     description:
       'A web-based agricultural marketplace enabling farmers to sell their products online directly to consumers.',
     image:
-      'https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\Harvest-hub.jpeg',
     technologies: [
       'HTML',
       'CSS',
@@ -77,7 +77,7 @@ const projectsData: ProjectData[] = [
     description:
       'An AI-based healthcare application predicting diabetes and heart disease with up to 85% accuracy using machine learning.',
     image:
-      'https://images.pexels.com/photos/4226119/pexels-photo-4226119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\AID.jpeg',
     technologies: ['Python', 'SVM', 'Jupyter Notebook', 'PyCharm'],
     githubLink: 'https://github.com',
   },
@@ -87,17 +87,17 @@ const projectsData: ProjectData[] = [
     description:
       'A machine learning project that analyzes sentiment in text using natural language processing techniques. Implemented using Python and scikit-learn.',
     image:
-      'https://images.pexels.com/photos/3912981/pexels-photo-3912981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\Sent.png',
     technologies: ['Python', 'scikit-learn', 'NLTK', 'Pandas'],
     githubLink: 'https://github.com',
   },
   {
     id: 8,
-    title: 'IoT TJ Bot',
+    title: 'IoT Lightning Detection System',
     description:
-      'An interactive robot built using IBM Watson and Arduino Uno to demonstrate AI and IoT integration capabilities.',
+      'A real-time lightning detection system using Arduino and IoT sensors to monitor electrical activity and trigger alerts.',
     image:
-      'https://images.pexels.com/photos/8566472/pexels-photo-8566472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      '.\\src\\data\\images\\IOt.png',
     technologies: ['IBM Watson', 'Arduino Uno', 'Node.js', 'IoT'],
     githubLink: 'https://github.com',
   },
