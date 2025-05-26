@@ -10,12 +10,10 @@ const projectsData: ProjectData[] = [
       '.\\src\\data\\images\\ride.jpg',
     technologies: [
       'React.js',
-      'Redux Toolkit',
       'Node.js',
       'Express.js',
       'MongoDB',
       'Google Maps API',
-      'Stripe API',
       'Jenkins',
     ],
     githubLink: 'https://github.com/himanshu8655/rideease-frontend',
@@ -27,7 +25,7 @@ const projectsData: ProjectData[] = [
       'A web application that helps students find study partners based on their courses and interests. Built with React, Node.js, and MongoDB.',
     image:
       '.\\src\\data\\images\\icon.png',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Redux'],
+    technologies: ['React.js', 'Node.js', 'MongoDB','Express.js','Jenkins','Firebase','Docker', 'Kubernetes'],
     githubLink: 'https://github.com/abhaysoni1/Ghor-kalyug-StudyMate',
     liveLink:
       'https://frontend-dot-gen-lang-client-0403310649.ue.r.appspot.com/',
@@ -39,7 +37,7 @@ const projectsData: ProjectData[] = [
       'A fitness tracking application that helps users create and follow personalized workout plans. Features include exercise tracking and progress visualization.',
     image:
       '.\\src\\data\\images\\fit.png',
-    technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
+    technologies: ['ReactNative', 'TypeScript', 'Firebase', 'Tailwind CSS'],
     githubLink:
       'https://github.com/abhaysoni1/CS641_abhay_soni/tree/main/BuildYouFit',
   },
@@ -49,8 +47,8 @@ const projectsData: ProjectData[] = [
     description:
       'An educational platform enabling institutions to host and manage online teaching without their own website infrastructure.',
     image:
-      '.\\src\\data\\images\\fit.png',
-    technologies: ['JavaEE', 'ReactJS', 'Spring', 'MySQL', 'HTML', 'CSS'],
+      '.\\src\\data\\images\\Edu.png',
+    technologies: ['Java', 'React.js', 'Springboot', 'MySQL', 'HTML', 'CSS'],
     githubLink: 'https://github.com',
   },
   {
@@ -64,7 +62,7 @@ const projectsData: ProjectData[] = [
       'HTML',
       'CSS',
       'JavaScript',
-      'JavaEE',
+      'Java',
       'MySQL',
       'AWS',
       'Ajax',
@@ -78,7 +76,7 @@ const projectsData: ProjectData[] = [
       'An AI-based healthcare application predicting diabetes and heart disease with up to 85% accuracy using machine learning.',
     image:
       '.\\src\\data\\images\\AID.jpeg',
-    technologies: ['Python', 'SVM', 'Jupyter Notebook', 'PyCharm'],
+    technologies: ['Python', 'SVM', 'Jupyter Notebook','Pandas'],
     githubLink: 'https://github.com',
   },
   {
