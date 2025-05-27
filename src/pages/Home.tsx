@@ -169,7 +169,7 @@ const Home = () => {
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src="src\data\images\AbhayGrad.jpg"
+                    src={`${import.meta.env.BASE_URL}images/AbhayGrad.jpg`}
                     alt="Abhay Soni - Software Engineer"
                     className="w-full h-auto"
                   />

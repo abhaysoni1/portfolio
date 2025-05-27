@@ -33,11 +33,10 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
           ? 'bg-white dark:bg-dark-800 shadow-md py-2'
           : 'bg-transparent py-4'
-      }`}
+        }`}
     >
       <div className="container-custom flex justify-between items-center">
         <NavLink
@@ -53,10 +52,9 @@ const Navbar = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
               }`
             }
             onClick={handleNavLinkClick}
@@ -66,10 +64,9 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
               }`
             }
             onClick={handleNavLinkClick}
@@ -77,19 +74,18 @@ const Navbar = () => {
             Projects
           </NavLink>
           <a
-  href="src\assets\Abhay-Soni-Resume.pdf"
-  download="Abhay-Soni-Resume.pdf"
-  className="font-medium text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400"
->
-  Resume
-</a>
+            href={`${import.meta.env.BASE_URL}Abhay-Soni-Resume.pdf`}
+            download="Abhay-Soni-Resume.pdf"
+            className="font-medium text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400"
+          >
+            Resume
+          </a>
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300 hover:text-primary-600 dark:hover:text-primary-400'
               }`
             }
             onClick={handleNavLinkClick}
@@ -138,18 +134,16 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-dark-900 transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
+        className={`md:hidden fixed inset-0 z-40 bg-white dark:bg-dark-900 transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
       >
         <div className="flex flex-col items-center justify-center h-full gap-8 text-xl">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300'
               }`
             }
             onClick={handleNavLinkClick}
@@ -159,23 +153,30 @@ const Navbar = () => {
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300'
               }`
             }
             onClick={handleNavLinkClick}
           >
             Projects
           </NavLink>
+          <a
+            href="/Abhay-Soni-Resume.pdf"
+            download="Abhay-Soni-Resume.pdf"
+            className="font-medium text-dark-600 dark:text-dark-300"
+            onClick={handleNavLinkClick}
+          >
+            Resume
+          </a>
+
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `font-medium ${
-                isActive
-                  ? 'text-primary-600 dark:text-primary-400'
-                  : 'text-dark-600 dark:text-dark-300'
+              `font-medium ${isActive
+                ? 'text-primary-600 dark:text-primary-400'
+                : 'text-dark-600 dark:text-dark-300'
               }`
             }
             onClick={handleNavLinkClick}

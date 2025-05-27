@@ -7,7 +7,7 @@ const projectsData: ProjectData[] = [
     description:
       'A full-stack carpool and vehicle rental web application with real-time ride booking, role-based access, GPS tracking, and Stripe payment integration.',
     image:
-      '.\\src\\data\\images\\ride.jpg',
+      `${import.meta.env.BASE_URL}images/ride.jpg`,
     technologies: [
       'React.js',
       'Node.js',
@@ -24,7 +24,7 @@ const projectsData: ProjectData[] = [
     description:
       'A web application that helps students find study partners based on their courses and interests. Built with React, Node.js, and MongoDB.',
     image:
-      '.\\src\\data\\images\\icon.png',
+      `${import.meta.env.BASE_URL}images/icon.png`,
     technologies: ['React.js', 'Node.js', 'MongoDB','Express.js','Jenkins','Firebase','Docker', 'Kubernetes','LLM API Integration'],
     githubLink: 'https://github.com/abhaysoni1/Ghor-kalyug-StudyMate',
     liveLink:
@@ -36,7 +36,7 @@ const projectsData: ProjectData[] = [
     description:
       'A fitness tracking application that helps users create and follow personalized workout plans. Features include exercise tracking and progress visualization.',
     image:
-      '.\\src\\data\\images\\fit.png',
+      `${import.meta.env.BASE_URL}images/fit.png`,
     technologies: ['ReactNative', 'TypeScript', 'Firebase', 'Tailwind CSS'],
     githubLink:
       'https://github.com/abhaysoni1/CS641_abhay_soni/tree/main/BuildYouFit',
@@ -47,7 +47,7 @@ const projectsData: ProjectData[] = [
     description:
       'An educational platform enabling institutions to host and manage online teaching without their own website infrastructure.',
     image:
-      '.\\src\\data\\images\\Edu.png',
+      `${import.meta.env.BASE_URL}images\\Edu.png`,
     technologies: ['Java', 'React.js', 'Springboot', 'MySQL', 'HTML', 'CSS'],
     githubLink: 'https://github.com',
   },
@@ -57,7 +57,7 @@ const projectsData: ProjectData[] = [
     description:
       'A web-based agricultural marketplace enabling farmers to sell their products online directly to consumers.',
     image:
-      '.\\src\\data\\images\\Harvest-hub.jpeg',
+      `${import.meta.env.BASE_URL}images\\Harvest-hub.jpeg`,
     technologies: [
       'HTML',
       'CSS',
@@ -75,7 +75,7 @@ const projectsData: ProjectData[] = [
     description:
       'An AI-based healthcare application predicting diabetes and heart disease with up to 85% accuracy using machine learning.',
     image:
-      '.\\src\\data\\images\\AID.jpeg',
+      `${import.meta.env.BASE_URL}images/AID.jpeg`,
     technologies: ['Python', 'SVM', 'Jupyter Notebook','Pandas'],
     githubLink: 'https://github.com',
   },
@@ -85,7 +85,7 @@ const projectsData: ProjectData[] = [
     description:
       'A machine learning project that analyzes sentiment in text using natural language processing techniques. Implemented using Python and scikit-learn.',
     image:
-      '.\\src\\data\\images\\Sent.png',
+      `${import.meta.env.BASE_URL}images/Sent.png`,
     technologies: ['Python', 'scikit-learn', 'NLTK', 'Pandas'],
     githubLink: 'https://github.com',
   },
@@ -95,7 +95,7 @@ const projectsData: ProjectData[] = [
     description:
       'A real-time lightning detection system using Arduino and IoT sensors to monitor electrical activity and trigger alerts.',
     image:
-      '.\\src\\data\\images\\IOt.png',
+      `${import.meta.env.BASE_URL}images/IOT.png`,
     technologies: ['IBM Watson', 'Arduino Uno', 'Node.js', 'IoT'],
     githubLink: 'https://github.com',
   },
